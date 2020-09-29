@@ -14,7 +14,7 @@ func init() {
 	//flag.CommandLine = flag.NewFlagSet("", flag.ExitOnError)
 	//flag.CommandLine = flag.NewFlagSet("", flag.PanicOnError)
 	cmdLine.Usage = func() {
-		fmt.Fprintf(os.Stderr, "Usage of %s:\n", "questions")
+		_, _ = fmt.Fprintf(os.Stderr, "Usage of %s:\n", "questions")
 		cmdLine.PrintDefaults()
 	}
 	//flag.StringVar(&name, "name", "everyone", "The greeting object.")
@@ -29,7 +29,7 @@ func main() {
 	//	flag.PrintDefaults()
 	//}
 	//flag.Parse()
-	cmdLine.Parse(os.Args[1:])
+	_ = cmdLine.Parse(os.Args[1:])
 	fmt.Printf("Hello, %s!\n", name)
 	fmt.Printf("Hello, %d!\n", number)
 }
