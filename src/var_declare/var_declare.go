@@ -4,11 +4,14 @@ import (
 	"fmt"
 	"io"
 	"os"
+	. "var_declare/var_declare_domain"
 )
 
 var block = "package"
 
 func main() {
+	Domain()
+	fmt.Printf("The block is %s.\n", block)
 	block := "function"
 	{
 		block := "inner"
